@@ -1,4 +1,8 @@
 {
+  "watch": ["src/"],         
+  "ext": ".ts,.tsx",           
+  "ignore": ["src/**/*.spec.ts"],
+  "exec": "ts-node ./src/main.ts",
   "name": "nama-proyek",
   "version": "0.0.1",
   "description": "",

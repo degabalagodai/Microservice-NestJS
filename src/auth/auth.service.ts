@@ -1,8 +1,7 @@
-import { Injectable } from "@nestjs/common";
+import { Injectable, Param } from "@nestjs/common";
 import { Auth } from "src/auth/auth.entity";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from "typeorm"; 
-
 
 @Injectable ({})
 
@@ -26,14 +25,10 @@ export class AuthService {
     async data(): Promise<Auth[]> {
         return await this.userRepository.find();
     }
-   // async dataOne(): Promise<Auth[]> {
-      //  return await this.userRepository.findOneBy(id);
-   // }
-    async update(id: string) {
-        // ini isinya update
-        return await this.userRepository.findOne;
+    
+    async getById(@Param('id') id: string) {
+        const resource = await this.userRepository.getId;
+  
+        return 
     }
-    async delete(id: number): Promise<void> {
-        // ini isinya delete 
-    } 
 }
